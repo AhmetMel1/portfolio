@@ -34,7 +34,7 @@ export default function Header() {
             Menu <Icons.chevronDown className="ml-2 size-4" />
           </Button>
         </DialogTrigger>
-        <DialogContent className="text-muted-foreground max-h-screen w-[90%] rounded">
+        <DialogContent className="text-muted-foreground left-0 max-h-screen w-2/4 rounded">
           <DialogHeader>
             <DialogTitle className="text-md self-start font-medium">
               Navigation

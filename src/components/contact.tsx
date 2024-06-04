@@ -1,17 +1,20 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 
+import Loader from './loader';
+
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
+import { sendEmail } from '@/lib/email';
 import { formSchema, TFormSchema } from '@/lib/form-schema';
 import { cn } from '@/lib/utils';
-import { sendEmail } from '@/utils/email';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
@@ -22,8 +25,12 @@ export default function Contact() {
     formState: { errors },
   } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (values: TFormSchema) => {
     const { data, error } = await sendEmail(values);
+
+    setLoading(false);
 
     if (error) {
       toast.error(error);
@@ -93,8 +100,15 @@ export default function Contact() {
             </p>
           )}
         </div>
-        <Button size="lg">
-          Submit <Icons.arrowRight className="ml-2 size-4" />
+        <Button size="lg" onClick={() => setLoading(true)}>
+          {loading ? (
+            <Loader className="size-4" />
+          ) : (
+            <>
+              Submit
+              <Icons.arrowRight className="ml-2 size-4" />
+            </>
+          )}{' '}
         </Button>
       </form>
     </motion.section>

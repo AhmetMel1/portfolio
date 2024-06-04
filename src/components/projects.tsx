@@ -11,7 +11,7 @@ export default function Projects() {
   const { ref } = useSectionInView('Projects');
 
   return (
-    <section ref={ref} id="projects" className="my-36 scroll-mt-28">
+    <section ref={ref} id="projects" className="my-36 scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{

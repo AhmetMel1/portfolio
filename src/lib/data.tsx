@@ -105,6 +105,7 @@ export const skillsData = [
   { icon: <Icons.csharp className="size-12" /> },
   { icon: <Icons.aspnet className="size-12" /> },
   { icon: <Icons.react className="size-12" /> },
+  { icon: <Icons.nextjs className="size-12" /> },
   { icon: <Icons.html className="size-12" /> },
   { icon: <Icons.css className="size-12" /> },
   { icon: <Icons.tailwind className="size-12" /> },
