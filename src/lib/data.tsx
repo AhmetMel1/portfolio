@@ -25,7 +25,7 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/projects/balancelogo.png',
+    image: '/projects/balanceLogo.png',
     title: 'Exchange',
     description:
       'Cryptocurrency exchange platform with a focus on user experience.',
@@ -47,7 +47,7 @@ export const projectsData = [
     },
   },
   {
-    image: '/projects/balancelogo.png',
+    image: '/projects/balanceLogo.png',
     title: 'NFT Marketplace',
     description:
       'NFT marketplace for digital art, collectibles, and virtual real estate.',
