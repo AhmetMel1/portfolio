@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -21,6 +21,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSection();
+
+  useEffect(() => {
+    window.history.replaceState({}, document.title, '/');
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <motion.header
@@ -44,7 +49,9 @@ export default function Header() {
             <ul>
               {links.map(({ name, hash }) => (
                 <li
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
                   key={name}
                   className="border-muted-foreground/10 py-3 text-sm [&:not(:last-child)]:border-b"
                 >
