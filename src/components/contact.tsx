@@ -100,7 +100,7 @@ export default function Contact() {
             </p>
           )}
         </div>
-        <Button size="lg" onClick={() => setLoading(true)}>
+        <Button size="lg" onClick={() => setLoading(true)} disabled={loading}>
           {loading ? (
             <Loader className="size-4" />
           ) : (
