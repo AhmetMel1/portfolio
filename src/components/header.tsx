@@ -39,7 +39,7 @@ export default function Header() {
             Menu <Icons.chevronDown className="ml-2 size-4" />
           </Button>
         </DialogTrigger>
-        <DialogContent className="text-muted-foreground left-0 max-h-screen w-2/4 rounded">
+        <DialogContent className="text-muted-foreground top-1/2 max-h-screen w-screen -translate-x-1/2 -translate-y-1/2 rounded text-center">
           <DialogHeader>
             <DialogTitle className="text-md self-start font-medium">
               Navigation
@@ -53,7 +53,7 @@ export default function Header() {
                     setOpen(false);
                   }}
                   key={name}
-                  className="border-muted-foreground/10 py-3 text-sm [&:not(:last-child)]:border-b"
+                  className="border-muted-foreground/30 py-3 text-sm [&:not(:last-child)]:border-b"
                 >
                   <Link className="block" href={hash}>
                     {name}
