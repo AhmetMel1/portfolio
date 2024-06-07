@@ -14,7 +14,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:mt-20"
+      className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:mt-28"
     >
       <motion.div className="mb-4  grayscale transition-all duration-300 hover:scale-110 hover:filter-none">
         <motion.img
@@ -25,7 +25,7 @@ export default function Intro() {
           }}
           src="/ahmetmelihtemiz.png"
           alt="Ahmet Melih Temiz"
-          className="size-56 rounded-full"
+          className="size-40 rounded-full sm:size-56"
         />
       </motion.div>
       <motion.h1
