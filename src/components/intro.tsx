@@ -16,7 +16,7 @@ export default function Intro() {
       id="home"
       className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:mt-28"
     >
-      <motion.div className="mb-4  grayscale transition-all duration-300 hover:scale-110 hover:filter-none">
+      <motion.div className="mb-4  grayscale transition duration-700 hover:scale-110 hover:filter-none">
         <motion.img
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
