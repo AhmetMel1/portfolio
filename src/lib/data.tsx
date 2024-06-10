@@ -53,7 +53,7 @@ export const projectsData = [
       'NFT marketplace for digital art, collectibles, and virtual real estate.',
     technologies: ['NodeJS', 'NextJs', 'TypeScript', 'Ethers', 'MongoDb'],
     links: {
-      preview: 'https://ido.balancenetwork.io/',
+      preview: 'https://nft.balancenetwork.io/',
       github: '',
     },
   },

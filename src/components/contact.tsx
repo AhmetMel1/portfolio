@@ -22,12 +22,14 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
   } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
 
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (values: TFormSchema) => {
+    setLoading(true);
     const { data, error } = await sendEmail(values);
 
     setLoading(false);
@@ -100,7 +102,10 @@ export default function Contact() {
             </p>
           )}
         </div>
-        <Button size="lg" onClick={() => setLoading(true)} disabled={loading}>
+        <Button
+          size="lg"
+          disabled={loading || watch('email') === '' || watch('message') === ''}
+        >
           {loading ? (
             <Loader className="size-4" />
           ) : (
