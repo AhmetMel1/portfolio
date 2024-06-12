@@ -64,7 +64,7 @@ export default function Intro() {
           className="hidden sm:flex"
           asChild
         >
-          <a href="/AhmetMelihCV.pdf" download>
+          <a href="/ahmetmelihtemiz.pdf" download>
             Download CV <Icons.download className="ml-2 size-4" />
           </a>
         </Button>
