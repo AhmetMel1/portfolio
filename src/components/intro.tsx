@@ -23,7 +23,7 @@ export default function Intro() {
           transition={{
             delay: 0.1,
           }}
-          src="/ahmetmelihtemiz.png"
+          src="/ahmetmelihtemiz.webp"
           alt="Ahmet Melih Temiz"
           className="size-40 rounded-full sm:size-56"
         />
