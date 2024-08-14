@@ -13,10 +13,10 @@ export const links = [
     name: 'Projects',
     hash: '#projects',
   },
-  // {
-  //   name: 'Experience',
-  //   hash: '#experience',
-  // },
+  {
+    name: 'Experience',
+    hash: '#experience',
+  },
   {
     name: 'Contact',
     hash: '#contact',
@@ -78,22 +78,32 @@ export const projectsData = [
       github: 'https://github.com/AhmetMel1/netgsm-sms-sender',
     },
   },
+  {
+    image: '/projects/npm.png',
+    title: 'Email Sender With Html',
+    description: 'Npm package for sending email with html using nodemailer.',
+    technologies: ['NodeJS', 'TypeScript'],
+    links: {
+      preview: 'https://www.npmjs.com/package/html-mail-sender',
+      github: 'https://github.com/AhmetMel1/html-mail-sender',
+    },
+  },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: 'Balance Network',
-//     location: 'Şişli/İstanbul',
-//     description: 'Full Stack Developer',
-//     date: '2023 - Present',
-//   },
-//   {
-//     title: 'Freelancing',
-//     location: 'Remote',
-//     description: 'Full Stack Developer',
-//     date: '2023 - Present',
-//   },
-// ] as const;
+export const experiencesData = [
+  {
+    title: 'Balance Network',
+    location: 'Şişli/İstanbul',
+    description: 'Backend Developer',
+    date: '2023 March - 2024 September',
+  },
+  {
+    title: 'Freelancing',
+    location: 'Remote',
+    description: 'Full Stack Developer',
+    date: '2023 - Present',
+  },
+] as const;
 
 export const skillsData = [
   { icon: <Icons.nestjs className="size-12" /> },
