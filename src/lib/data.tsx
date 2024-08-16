@@ -88,6 +88,16 @@ export const projectsData = [
       github: 'https://github.com/AhmetMel1/html-mail-sender',
     },
   },
+  {
+    image: '/projects/amplify.png',
+    title: 'Basic Amplify App With React',
+    description: 'Basic Amplify app with ReactJS and AWS Amplify.',
+    technologies: ['React', 'TypeScript', 'AWS Amplify'],
+    links: {
+      preview: 'https://aws-amplify-react.vercel.app/',
+      github: 'https://github.com/AhmetMel1/aws-amplify-react',
+    },
+  },
 ] as const;
 
 export const experiencesData = [
