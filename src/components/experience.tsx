@@ -22,7 +22,7 @@ export const Experience = () => {
     <section
       ref={sectionRef}
       id="experience"
-      className="my-32 scroll-mt-32  w-full"
+      className="my-32 scroll-mt-32 w-full"
     >
       <SectionHeading
         heading="My Experience"

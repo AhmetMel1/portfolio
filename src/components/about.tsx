@@ -25,9 +25,9 @@ export default function About() {
           Istanbul University Cerrahpaşa and have always expanded my passion for
           technology through constant learning. Previously, I worked as a
           backend developer at Balance Network, where I gained experience with
-          technologies like Java, Spring Boot, NodeJS, and NestJS. My desire
-          for continuous self-improvement and my ability to work in teams enable
-          me to develop effective solutions, even in complex projects. I aim to
+          technologies like Java, Spring Boot, NodeJS, and NestJS. My desire for
+          continuous self-improvement and my ability to work in teams enable me
+          to develop effective solutions, even in complex projects. I aim to
           contribute to the world of technology with innovative ideas.
         </p>
         <p>
