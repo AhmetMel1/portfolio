@@ -89,6 +89,17 @@ export const projectsData = [
     },
   },
   {
+    image: '/projects/artiCareerLogo.png',
+    title: 'Arti Career',
+    description:
+      'A project that provides AI-powered university and career counseling.',
+    technologies: ['NestJS', 'TypeScript', 'MongoDb', 'ChatGPT'],
+    links: {
+      preview: 'https://articareer.com/',
+      github: '',
+    },
+  },
+  {
     image: '/projects/amplify.png',
     title: 'Basic Amplify App With React',
     description: 'Basic Amplify app with ReactJS and AWS Amplify.',
