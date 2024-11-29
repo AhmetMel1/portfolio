@@ -25,6 +25,38 @@ export const links = [
 
 export const projectsData = [
   {
+    image: '/projects/gormek-lazim.png',
+    title: 'Görmek Lazım',
+    description:
+      'An e-commerce platform that focuses on user experience and includes many different services.',
+    technologies: ['NodeJS', 'TypeScript', 'MongoDb'],
+    links: {
+      preview: 'https://gormeklazim.com/',
+      github: '',
+    },
+  },
+  {
+    image: '/projects/artiCareerLogo.png',
+    title: 'Arti Career',
+    description:
+      'A project that provides AI-powered university and career counseling.',
+    technologies: ['NestJS', 'TypeScript', 'MongoDb', 'ChatGPT'],
+    links: {
+      preview: 'https://articareer.com/',
+      github: '',
+    },
+  },
+  {
+    image: '/projects/amplify.png',
+    title: 'Basic Amplify App With React',
+    description: 'Basic Amplify app with ReactJS and AWS Amplify.',
+    technologies: ['React', 'TypeScript', 'AWS Amplify'],
+    links: {
+      preview: 'https://aws-amplify-react.vercel.app/',
+      github: 'https://github.com/AhmetMel1/aws-amplify-react',
+    },
+  },
+  {
     image: '/projects/balanceLogo.png',
     title: 'Exchange',
     description:
@@ -86,27 +118,6 @@ export const projectsData = [
     links: {
       preview: 'https://www.npmjs.com/package/html-mail-sender',
       github: 'https://github.com/AhmetMel1/html-mail-sender',
-    },
-  },
-  {
-    image: '/projects/artiCareerLogo.png',
-    title: 'Arti Career',
-    description:
-      'A project that provides AI-powered university and career counseling.',
-    technologies: ['NestJS', 'TypeScript', 'MongoDb', 'ChatGPT'],
-    links: {
-      preview: 'https://articareer.com/',
-      github: '',
-    },
-  },
-  {
-    image: '/projects/amplify.png',
-    title: 'Basic Amplify App With React',
-    description: 'Basic Amplify app with ReactJS and AWS Amplify.',
-    technologies: ['React', 'TypeScript', 'AWS Amplify'],
-    links: {
-      preview: 'https://aws-amplify-react.vercel.app/',
-      github: 'https://github.com/AhmetMel1/aws-amplify-react',
     },
   },
 ] as const;
