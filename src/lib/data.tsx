@@ -127,13 +127,13 @@ export const experiencesData = [
     title: 'Balance Network',
     location: 'Şişli/İstanbul',
     description: 'Backend Developer',
-    date: '2023 March - 2024 September',
+    date: '2023 March - 2025 February',
   },
   {
-    title: 'Freelancing',
-    location: 'Remote',
-    description: 'Full Stack Developer',
-    date: '2023 - Present',
+    title: 'Görmek Lazım',
+    location: 'Şişli/İstanbul',
+    description: 'Backend Developer',
+    date: '2025 March - Present',
   },
 ] as const;
 
