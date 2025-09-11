@@ -31,18 +31,18 @@ export const projectsData = [
       'An e-commerce platform that focuses on user experience and includes many different services.',
     technologies: ['NodeJS', 'TypeScript', 'MongoDb'],
     links: {
-      preview: 'https://gormeklazim.com/',
+      preview: 'https://gormeklazim.com',
       github: '',
     },
   },
   {
-    image: '/projects/artiCareerLogo.png',
-    title: 'Arti Career',
+    image: '/projects/bros.png',
+    title: 'Brosmen',
     description:
-      'A project that provides AI-powered university and career counseling.',
-    technologies: ['NestJS', 'TypeScript', 'MongoDb', 'ChatGPT'],
+      'A project that allows clients to easily book online appointments with hairdressers.',
+    technologies: ['NestJS', 'TypeScript', 'Tailwind CSS'],
     links: {
-      preview: 'https://articareer.com/',
+      preview: 'https://brosmen.com.tr',
       github: '',
     },
   },
@@ -56,39 +56,7 @@ export const projectsData = [
       github: 'https://github.com/AhmetMel1/aws-amplify-react',
     },
   },
-  {
-    image: '/projects/balanceLogo.png',
-    title: 'Exchange',
-    description:
-      'Cryptocurrency exchange platform with a focus on user experience.',
-    technologies: ['Spring Boot', 'ReactJS', 'PostgreSQL', 'Redis', 'MongoDb'],
-    links: {
-      preview: 'https://www.balancenetwork.io/',
-      github: '',
-    },
-  },
-  {
-    image: '/projects/balanceLogo.png',
-    title: 'IDO Launchpad',
-    description:
-      'Initial DEX Offering platform for new cryptocurrency projects.',
-    technologies: ['NestJS', 'ReactJS', 'TypeScript', 'Ethers', 'MongoDb'],
-    links: {
-      preview: 'https://ido.balancenetwork.io/',
-      github: '',
-    },
-  },
-  {
-    image: '/projects/balanceLogo.png',
-    title: 'NFT Marketplace',
-    description:
-      'NFT marketplace for digital art, collectibles, and virtual real estate.',
-    technologies: ['NodeJS', 'NextJs', 'TypeScript', 'Ethers', 'MongoDb'],
-    links: {
-      preview: 'https://nft.balancenetwork.io/',
-      github: '',
-    },
-  },
+
   {
     image: '/projects/npm.png',
     title: 'OKX API Connect',
@@ -112,13 +80,69 @@ export const projectsData = [
   },
   {
     image: '/projects/npm.png',
-    title: 'Email Sender With Html',
+    title: 'Email Sender',
     description: 'Npm package for sending email with html using nodemailer.',
     technologies: ['NodeJS', 'TypeScript'],
     links: {
       preview: 'https://www.npmjs.com/package/html-mail-sender',
       github: 'https://github.com/AhmetMel1/html-mail-sender',
     },
+  },
+  {
+    image: '/projects/artiCareerLogo.png',
+    title: 'Arti Career',
+    description:
+      'A project that provides AI-powered university and career counseling.',
+    technologies: ['NestJS', 'TypeScript', 'MongoDb', 'ChatGPT'],
+    links: {
+      preview: 'https://articareer.com',
+      github: '',
+    },
+    disabled: true,
+    reason:
+      'This project was developed during my time at a previous company, and it has been taken offline by the company. Due to legal reasons, the source code and content cannot be shared. You can view the former link of the project here',
+  },
+  {
+    image: '/projects/balanceLogo.png',
+    title: 'Exchange',
+    description:
+      'Cryptocurrency exchange platform with a focus on user experience.',
+    technologies: ['Spring Boot', 'ReactJS', 'PostgreSQL', 'Redis', 'MongoDb'],
+    links: {
+      preview: 'https://www.balancenetwork.io',
+      github: '',
+    },
+    disabled: true,
+    reason:
+      'This project was developed during my time at a previous company, and it has been taken offline by the company. Due to legal reasons, the source code and content cannot be shared. You can view the former link of the project here',
+  },
+  {
+    image: '/projects/balanceLogo.png',
+    title: 'IDO Launchpad',
+    description:
+      'Initial DEX Offering platform for new cryptocurrency projects.',
+    technologies: ['NestJS', 'ReactJS', 'TypeScript', 'Ethers', 'MongoDb'],
+    links: {
+      preview: 'https://ido.balancenetwork.io',
+      github: '',
+    },
+    disabled: true,
+    reason:
+      'This project was developed during my time at a previous company, and it has been taken offline by the company. Due to legal reasons, the source code and content cannot be shared. You can view the former link of the project here',
+  },
+  {
+    image: '/projects/balanceLogo.png',
+    title: 'NFT Marketplace',
+    description:
+      'NFT marketplace for digital art, collectibles, and virtual real estate.',
+    technologies: ['NodeJS', 'NextJs', 'TypeScript', 'Ethers', 'MongoDb'],
+    links: {
+      preview: 'https://nft.balancenetwork.io',
+      github: '',
+    },
+    disabled: true,
+    reason:
+      'This project was developed during my time at a previous company, and it has been taken offline by the company. Due to legal reasons, the source code and content cannot be shared. You can view the former link of the project here',
   },
 ] as const;
 
