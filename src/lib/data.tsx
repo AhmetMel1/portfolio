@@ -47,17 +47,6 @@ export const projectsData = [
     },
   },
   {
-    image: '/projects/amplify.png',
-    title: 'Basic Amplify App With React',
-    description: 'Basic Amplify app with ReactJS and AWS Amplify.',
-    technologies: ['React', 'TypeScript', 'AWS Amplify'],
-    links: {
-      preview: 'https://aws-amplify-react.vercel.app/',
-      github: 'https://github.com/AhmetMel1/aws-amplify-react',
-    },
-  },
-
-  {
     image: '/projects/npm.png',
     title: 'OKX API Connect',
     description:
@@ -86,6 +75,16 @@ export const projectsData = [
     links: {
       preview: 'https://www.npmjs.com/package/html-mail-sender',
       github: 'https://github.com/AhmetMel1/html-mail-sender',
+    },
+  },
+  {
+    image: '/projects/amplify.png',
+    title: 'Basic Amplify App With React',
+    description: 'Basic Amplify app with ReactJS and AWS Amplify.',
+    technologies: ['React', 'TypeScript', 'AWS Amplify'],
+    links: {
+      preview: 'https://aws-amplify-react.vercel.app/',
+      github: 'https://github.com/AhmetMel1/aws-amplify-react',
     },
   },
   {
@@ -155,7 +154,7 @@ export const experiencesData = [
   },
   {
     title: 'Görmek Lazım',
-    location: 'Şişli/İstanbul',
+    location: 'Avcılar/İstanbul',
     description: 'Backend Developer',
     date: '2025 March - Present',
   },
