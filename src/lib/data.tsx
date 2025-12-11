@@ -156,7 +156,7 @@ export const experiencesData = [
     title: 'Görmek Lazım',
     location: 'Avcılar/İstanbul',
     description: 'Backend Developer',
-    date: '2025 March - Present',
+    date: '2024 September - Present',
   },
 ] as const;
 
