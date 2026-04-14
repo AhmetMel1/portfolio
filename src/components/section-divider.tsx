@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 export default function SectionDivider() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.125 }}
-      className="bg-muted my-5 h-16 w-1 rounded-full sm:my-10"
-    ></motion.div>
+      initial={{ opacity: 0, scaleX: 0.7 }}
+      animate={{ opacity: 1, scaleX: 1 }}
+      transition={{ delay: 0.2 }}
+      className="via-border my-8 h-px w-full max-w-3xl bg-gradient-to-r from-transparent to-transparent sm:my-12"
+    />
   );
 }

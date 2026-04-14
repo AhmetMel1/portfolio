@@ -11,26 +11,20 @@ export default function Projects() {
   const { ref } = useSectionInView('Projects');
 
   return (
-    <section ref={ref} id="projects" className="my-36 scroll-mt-24">
+    <section ref={ref} id="projects" className="my-28 w-full scroll-mt-24">
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          delay: 0.175,
-        }}
-        viewport={{
-          once: true,
-        }}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        viewport={{ once: true }}
       >
         <SectionHeading
-          heading="My Projects"
-          content="Projects I worked on. Each of them containing its own case study."
+          heading="Selected Projects"
+          content="A few projects that reflect how I approach engineering, system design, and product quality."
         />
       </motion.div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projectsData.map((project, index) => (
           <Project key={project.title} project={project} index={index} />
         ))}

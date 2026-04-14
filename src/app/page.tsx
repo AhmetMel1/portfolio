@@ -11,17 +11,20 @@ import ThemeToggle from '@/components/theme-toggle';
 export default function Home() {
   return (
     <>
-      <div className="container flex flex-col items-center">
-        <Header />
-        <Intro />
-        <SectionDivider />
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
-        <Footer />
+      <div className="relative min-h-screen overflow-x-hidden">
+        <div className="container mx-auto flex max-w-6xl flex-col items-center px-4 sm:px-6">
+          <Header />
+          <Intro />
+          <SectionDivider />
+          <About />
+          <Projects />
+          <Experience />
+          <Contact />
+          <Footer />
+        </div>
       </div>
-      <ThemeToggle className="fixed bottom-5 right-5 hidden sm:bottom-8 sm:right-8 sm:flex" />
+
+      <ThemeToggle className="fixed bottom-5 right-5 z-50 hidden shadow-lg sm:bottom-8 sm:right-8 sm:flex" />
     </>
   );
 }

@@ -14,77 +14,76 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="my-10 flex scroll-mt-96 flex-col items-center gap-4 text-center sm:mt-28"
+      className="flex min-h-[78vh] w-full scroll-mt-96 flex-col items-center justify-center py-36 text-center sm:py-60"
     >
-      <motion.div className="mb-4  grayscale transition duration-700 hover:scale-110 hover:filter-none">
-        <motion.img
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.1,
-          }}
-          src="/ahmetmelihtemiz.webp"
-          alt="Ahmet Melih Temiz"
-          className="size-40 rounded-full sm:size-56"
-        />
-      </motion.div>
-      <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-3xl font-bold leading-tight tracking-tighter sm:text-4xl"
-      >
-        Ahmet Melih Temiz
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-        className="text-muted-foreground max-w-lg"
-      >
-        Full Stack Developer
-      </motion.p>
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-        className="flex flex-row gap-2"
+        initial={{ opacity: 0, scale: 0.9, y: 40 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative mb-8"
       >
-        <Button asChild size="lg">
+        <motion.div className="mb-4  grayscale transition duration-700 hover:scale-110 hover:filter-none">
+          <motion.img
+            src="/ahmetmelihtemiz.webp"
+            alt="Ahmet Melih Temiz"
+            className="size-40 rounded-full sm:size-56"
+            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.25 }}
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 35 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="border-border/60 bg-background/70 text-muted-foreground mb-4 inline-flex items-center rounded-full border px-4 py-2 text-xs font-medium shadow-sm backdrop-blur sm:text-sm"
+      >
+        Backend-Focused Full Stack Developer
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 35 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+        className="flex flex-wrap items-center justify-center gap-3"
+      >
+        <Button asChild size="lg" className="rounded-xl px-6">
           <Link href="#contact">
-            Get in touch <Icons.arrowRight className="ml-2 size-4" />
+            Let&apos;s talk <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
+
         <Button
           variant="secondary"
           size="lg"
-          className="hidden sm:flex"
+          className="rounded-xl px-6"
           asChild
         >
           <a href="/ahmetmelihtemiz.pdf" download>
             Download CV <Icons.download className="ml-2 size-4" />
           </a>
         </Button>
-        <Button variant="secondary" size="icon" asChild>
+
+        <Button variant="secondary" size="icon" className="rounded-xl" asChild>
           <a
             href="https://www.linkedin.com/in/ahmet-melih-temiz/"
             aria-label="Linkedin"
-            download
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <Icons.linkedin className="size-6" />
+            <Icons.linkedin className="size-5" />
           </a>
         </Button>
-        <Button variant="secondary" size="icon" asChild>
+
+        <Button variant="secondary" size="icon" className="rounded-xl" asChild>
           <a
             href="https://github.com/AhmetMel1"
             aria-label="Github"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <Icons.github className="size-6" />
+            <Icons.github className="size-5" />
           </a>
         </Button>
       </motion.div>

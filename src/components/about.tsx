@@ -13,38 +13,60 @@ export default function About() {
     <motion.section
       ref={ref}
       id="about"
-      className="my-12 flex w-full scroll-mt-48 flex-col items-center "
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      className="my-24 w-full scroll-mt-32"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45 }}
+      viewport={{ once: true }}
     >
       <SectionHeading heading="About Me" />
-      <div className="-mt-5 max-w-2xl text-center leading-6">
-        <p className="mb-4">
-          Hello, I&apos;m Ahmet Melih Temiz. I’m a backend-focused software
-          developer who loves building clean, scalable and meaningful systems.
-          My journey began with studying Computer Programming at Istanbul
-          University – Cerrahpaşa, and since then, I’ve continued to expand my
-          knowledge through hands-on projects and continuous learning. I
-          previously worked at Balance Network, contributing to the development
-          and evolution of the company’s cryptocurrency exchange platform. This
-          role helped me gain solid experience in backend development while also
-          collaborating on frontend features when needed. Currently, I’m working
-          as a backend developer at Görmek Lazım, a multi-vertical e-commerce
-          super-app that covers marketplace, swap, auction, bazaar, and crafts
-          modules. Here, I focus on building reliable backend services,
-          improving system structure, and ensuring the overall performance of
-          the platform. I enjoy solving complex problems, collaborating with
-          teams, and creating products that genuinely add value. My goal is to
-          keep improving myself while contributing to projects that make an
-          impact.
-        </p>
-        <p>
-          I&apos;m open to Job opportunities where I can contribute, learn and
-          grow. If you have a good opportunity that matches my skills and
-          experience then don&apos;t hesitate to contact me.
-        </p>
+
+      <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="border-border/60 bg-background/70 rounded-3xl border p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] backdrop-blur sm:p-8">
+          <p className="text-muted-foreground text-sm leading-8 sm:text-base">
+            Hello, I&apos;m Ahmet Melih Temiz. I’m a backend-focused software
+            developer who enjoys building clean, scalable, and meaningful
+            systems. My journey started with Computer Programming at Istanbul
+            University – Cerrahpaşa, and since then I&apos;ve continued learning
+            through hands-on projects and real production experience.
+          </p>
+
+          <p className="text-muted-foreground mt-5 text-sm leading-8 sm:text-base">
+            I previously worked at Balance Network, where I contributed to a
+            cryptocurrency exchange platform and strengthened my backend
+            foundations while also supporting frontend needs when necessary.
+            Currently, I work at Görmek Lazım, a multi-vertical e-commerce
+            super-app, where I focus on reliable backend services, system
+            structure, and platform performance.
+          </p>
+
+          <p className="text-muted-foreground mt-5 text-sm leading-8 sm:text-base">
+            I enjoy solving complex product problems, collaborating closely with
+            teams, and shipping systems that create real value. I’m open to
+            strong opportunities where I can contribute, grow, and keep pushing
+            my engineering standards higher.
+          </p>
+        </div>
+
+        <div className="from-primary/10 via-background to-background border-border/60 rounded-3xl border bg-gradient-to-br p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] sm:p-8">
+          <div className="mb-4 text-sm font-semibold">Highlights</div>
+          <div className="text-muted-foreground space-y-4 text-sm leading-7">
+            <div className="border-border/60 bg-background/70 rounded-2xl border p-4">
+              Backend architecture and API development
+            </div>
+            <div className="border-border/60 bg-background/70 rounded-2xl border p-4">
+              Performance-focused engineering mindset
+            </div>
+            <div className="border-border/60 bg-background/70 rounded-2xl border p-4">
+              Production experience in fintech and e-commerce
+            </div>
+            <div className="border-border/60 bg-background/70 rounded-2xl border p-4">
+              Clean code, maintainability, and team collaboration
+            </div>
+          </div>
+        </div>
       </div>
+
       <Skills />
     </motion.section>
   );

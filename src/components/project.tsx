@@ -25,13 +25,13 @@ type TProps = {
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 40,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1 * index,
+      delay: 0.08 * index,
     },
   }),
 };
@@ -41,38 +41,40 @@ export const Project = ({ project, index }: TProps) => {
     project as TProjectExt;
 
   return (
-    <motion.div
+    <motion.article
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className={`bg-secondary relative flex h-full flex-col rounded p-5 ${
-        disabled ? 'opacity-70 grayscale' : ''
+      className={`border-border/60 bg-background/80 group relative flex h-full flex-col overflow-hidden rounded-3xl border p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(0,0,0,0.08)] ${
+        disabled ? 'opacity-80' : ''
       }`}
     >
+      <div className="from-primary/10 pointer-events-none absolute inset-0 bg-gradient-to-br via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
       {disabled && (
-        <span className="absolute right-3 top-3 z-10 rounded-full bg-red-600 px-2 py-1 text-xs font-semibold text-white">
+        <span className="absolute right-4 top-4 z-10 rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1 text-xs font-semibold text-red-500">
           Past Work
         </span>
       )}
 
-      <div className="bg-muted mb-3 w-fit rounded-full p-4">
-        <Image src={image} alt={`${title} image`} width={32} height={32} />
+      <div className="bg-muted/70 border-border/60 mb-5 flex size-14 items-center justify-center rounded-2xl border">
+        <Image src={image} alt={`${title} image`} width={30} height={30} />
       </div>
 
-      <div className="flex h-full flex-col">
+      <div className="relative flex h-full flex-col">
         <div>
-          <h3 className="my-2 text-lg font-medium">{title}</h3>
-          <p className="text-muted-foreground">{description}</p>
+          <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+          <p className="text-muted-foreground mt-3 text-sm leading-7">
+            {description}
+          </p>
         </div>
 
-        <div className="grow"></div>
-
-        <div className="my-3 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {(technologies ?? []).map((tech) => (
             <span
-              className="bg-muted rounded-full px-3 py-1 text-sm"
+              className="border-border/60 bg-muted/60 rounded-full border px-3 py-1 text-xs font-medium"
               key={tech}
             >
               {tech}
@@ -80,62 +82,69 @@ export const Project = ({ project, index }: TProps) => {
           ))}
         </div>
 
-        <div className="mt-3 flex flex-wrap gap-2">
-          {disabled ? (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="outline" className="px-5">
-                  <Icons.info className="size-5" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="bg-secondary fixed left-1/2 top-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg p-6 text-center shadow-lg">
-                <DialogHeader>
-                  <DialogTitle className="text-center">{title}</DialogTitle>
-                </DialogHeader>
-                <p className="text-muted-foreground text-sm">
-                  {reason}:
-                  <br />
-                  <p className="text-primary mt-1 text-center">
-                    <a
-                      href={links.preview}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {links.preview}
-                    </a>
+        <div className="mt-auto pt-6">
+          <div className="flex flex-wrap gap-2">
+            {disabled ? (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="rounded-xl px-5">
+                    <Icons.info className="mr-2 size-4" />
+                    Details
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md rounded-3xl p-6">
+                  <DialogHeader>
+                    <DialogTitle>{title}</DialogTitle>
+                  </DialogHeader>
+                  <p className="text-muted-foreground text-sm leading-7">
+                    {reason}
                   </p>
-                </p>
-              </DialogContent>
-            </Dialog>
-          ) : (
-            <>
-              <Button variant="outline" asChild className="mr-2 px-5">
-                <a
-                  href={links?.preview}
-                  aria-label="preview project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icons.preview className="size-5" />
-                </a>
-              </Button>
-
-              {links.github != '' && (
-                <Button variant="outline" asChild className="px-5">
                   <a
-                    href={links.github}
-                    aria-label="github"
+                    href={links.preview}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary mt-2 inline-block text-sm font-medium underline underline-offset-4"
+                  >
+                    Visit related link
+                  </a>
+                </DialogContent>
+              </Dialog>
+            ) : (
+              <>
+                <Button variant="outline" asChild className="rounded-xl px-5">
+                  <a
+                    href={links?.preview}
+                    aria-label="preview project"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icons.githubOutline className="size-5" />
+                    <Icons.preview className="mr-2 size-4" />
+                    Live Preview
                   </a>
                 </Button>
-              )}
-            </>
-          )}
+
+                {links.github !== '' && (
+                  <Button
+                    variant="secondary"
+                    asChild
+                    className="rounded-xl px-5"
+                  >
+                    <a
+                      href={links.github}
+                      aria-label="github"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icons.githubOutline className="mr-2 size-4" />
+                      Code
+                    </a>
+                  </Button>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
