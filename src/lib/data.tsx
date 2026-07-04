@@ -36,6 +36,17 @@ export const projectsData = [
     },
   },
   {
+    image: '/projects/pusula.png',
+    title: 'Pusula Koçluk',
+    description:
+      'An education coaching and counseling platform for students preparing for LGS and YKS exams.',
+    technologies: ['NextJS', 'TypeScript', 'Tailwind CSS'],
+    links: {
+      preview: 'https://www.pusulakoclukdanismanlik.com.tr',
+      github: '',
+    },
+  },
+  {
     image: '/projects/bros.png',
     title: 'Brosmen',
     description:
