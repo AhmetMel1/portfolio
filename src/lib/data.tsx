@@ -161,7 +161,7 @@ export const experiencesData = [
     title: 'Balance Network',
     location: 'Şişli/İstanbul',
     description: 'Backend Developer',
-    date: '2023 March - 2025 February',
+    date: '2023 March - 2024 September',
   },
   {
     title: 'Görmek Lazım',
